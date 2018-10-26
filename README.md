@@ -11,7 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 * Install the [Node.js](https://nodejs.org/en/download/) in your PC.
 * Login to [Google Developer Console](https://console.developers.google.com/).
 * Create a project and search for the Youtube Data Api then enable API for the project you have created.
-* Copy and Paste the API Key in the index.html[].
+* Copy and Paste the API Key in the index.html[ Line: 29].
 ### Installing
 
 A step by step series of examples that tell you how to get a development env running.
