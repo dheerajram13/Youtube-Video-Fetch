@@ -37,10 +37,10 @@ open the browser and go to localhost:3000
 * [Youtube Data API v3](https://developers.google.com/youtube/v3/) - Module used to fetch youtube videos
 
 ## Screenshots
-Click to view the screenshots
- * ![Home page](images/Home.png) 
- * ![Search Results](images/Results.png)
- * ![Mobile Display](images/mobile.png)
+
+ (images/Home.png) 
+ (images/Results.png)
+ (images/mobile.png)
 
 ## Authors
 
