@@ -38,10 +38,9 @@ open the browser and go to localhost:3000
 
 ## Screenshots
 
- (images/Home.png) 
- (images/Results.png)
- (images/mobile.png)
-
+  ![Home page](images/Home.png) 
+  ![Search Results](images/Results.png)
+  ![Mobile Display](images/mobile.png)
 ## Authors
 
 * **Srirama Dheeraj** - [DheerajRam13](https://github.com/dheerajram13/)
