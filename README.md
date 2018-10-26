@@ -45,8 +45,6 @@ open the browser and go to localhost:3000
 
 * **Srirama Dheeraj** - [DheerajRam13](https://github.com/dheerajram13/)
 
-## License
 
-This project is licensed under the MIT License.
 
 
