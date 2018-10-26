@@ -1,6 +1,6 @@
 # Youtube Video Fetch
 
-This main domain of this project is to fetch the Youtube videos based on the search.
+The main domain of this project is to fetch the Youtube videos based on the search.
 
 ## Getting Started
 
