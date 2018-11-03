@@ -4,42 +4,73 @@
   <title>Youtube video Fetch</title>
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-  </head>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
   <body>
           <br>
 <div class="text-center">
         <div id="buttons">
         <!-- search bar -->
                 <label> <input  class="form-control form-control-lg form-control-borderless" id="query" value='eminem' type="text"/><br>
+                        <div id="container">
+                                        <p> Sort by </p>
+                                        <!-- Name filter  -->
+                                        <button id="name" class="btn btn-lg btn-success" >Name</button></label>                           
+                                        <!-- Date Filter  -->
+                                        <button id="date" class="btn btn-lg btn-success" >Date</button></label> 
+                                </div>                
+                         <br>
+
         <!-- Button -->
                 <button id="search-button"  class="btn btn-lg btn-success"  onclick="search_query()">Search</button></label>    
-   
+
+        </div> 
        <div id="container">
             <!-- A List for the Search results -->
            <h1>Search Results</h1>
            <ul id="results"></ul>
         </div>
+        
         </div>     
 </div>
     <script>
             var vid_data;
             var id_list = [];
+            var order = "name";
+        
+               
         // Method for the setting up Youtube Data api v3
      function search_query(){
-        gapi.client.setApiKey("Insert API KEY ");
+        gapi.client.setApiKey("AIzaSyBw5VpWKy0YvRGjCN1ym9TR6IpKEOdrOd8");
         gapi.client.load('youtube', 'v3', function() {
-                load_Request();
+             load_Request();
+               
         });
 }
+// Filter for the name
+$('#name').on('click', function(){
+	order = "title";
+	console.log(order);
+});
+// Filter for the date
+$('#date').on('click', function(){
+	order = "date";
+	console.log(order);
+});
       // Method for requesting the videos 
     function load_Request() {
-        var q = $('#query').val();
+        var q = $('#query').val();    
         var request = gapi.client.youtube.search.list({
                 q: q,
                 part: 'snippet', 
-                order: ["title","date"],
+                order: order,
                 maxResults: 20
         });
+        
+
         // Fetching the videos
         request.execute(function(response)  {                                                                                    
                 $('#results').empty()
@@ -53,6 +84,7 @@
 
         })  
     })  
+    
 }
   </script> 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
